@@ -39,6 +39,17 @@ string to_string(vector<bool> v) {
   res += "}";
   return res;
 }
+
+string to_string(vector<char> v) {
+  bool first = true;
+  string res = "{";
+  for (int i = 0; i < static_cast<int>(v.size()); i++) {
+      res += v[i];
+      if(i != static_cast<int>(v.size()) - 1) res += ", ";
+  }
+  res += "}";
+  return res;
+}
  
 template <size_t N>
 string to_string(bitset<N> v) {
